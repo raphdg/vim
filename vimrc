@@ -19,6 +19,8 @@ set softtabstop=4
 set expandtab
 set autoindent
 
+" set 80 caracter line
+set colorcolumn=80
 " set the search scan to wrap lines
 set wrapscan
 
@@ -109,3 +111,16 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
+
+"-----------------------
+" NERDTree configuration
+"-----------------------
+
+" Increase window size to 35 columns
+let NERDTreeWinSize=35
+
+" map <F7> to toggle NERDTree window
+nmap <silent> <F7> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\env','\.vim$', '\~$', '\.pyc$', '\.swp$', '\.egg-info$', '^dist$', '^build$']
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\~$']
+let NERDTreeHightlightCursorline=1
