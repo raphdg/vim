@@ -19,6 +19,9 @@ set softtabstop=4
 set expandtab
 set autoindent
 
+" show line numbers on the site
+set number
+
 " set 80 caracter line
 set colorcolumn=80
 " set the search scan to wrap lines
@@ -29,10 +32,13 @@ set wrapscan
 set noignorecase
 
 " Make command line two lines high
-set ch=2
+set ch=1
 
 " set visual bell
-set vb
+"set vb
+
+" Disable visualbell and bell
+set visualbell t_vb=
 
 " Make sure that unsaved buffers that are to be put in the background are 
 " allowed to go in there (ie. the "must save first" error doesn't come up)
@@ -61,7 +67,7 @@ set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ve
 set scrolloff=8
 
 " Allow the cursor to go in to "invalid" places
-set virtualedit=all
+set virtualedit=block
 
 " Make the command-line completion better
 set wildmenu
@@ -124,3 +130,8 @@ nmap <silent> <F7> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\env','\.vim$', '\~$', '\.pyc$', '\.swp$', '\.egg-info$', '^dist$', '^build$']
 let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\~$']
 let NERDTreeHightlightCursorline=1
+
+"-------------------
+" PEP8 plugin stuff
+" ------------------
+let g:pep8_map='<leader>8'
