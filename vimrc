@@ -4,6 +4,7 @@
 
 " Get pathogen up and running
 filetype off 
+call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -19,8 +20,10 @@ set softtabstop=4
 set expandtab
 set autoindent
 
+" Set guifont
+set guifont=Monospace\ 10
 " show line numbers on the site
-set number
+" set number
 
 " set 80 caracter line
 set colorcolumn=80
@@ -107,6 +110,7 @@ let mapleader = ","
 noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Esc>:CommandTBuffer<CR>
+set wildignore=*.pyc,*~
 
 "-----------------
 " Solarized stuff
